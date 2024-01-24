@@ -1,0 +1,10 @@
+version: '3'
+services:
+  slackware-build: &base
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: greycubesgav/slackware-build
+    container_name: slackware-build
+    volumes:
+      - ./build:/root/build:rw
